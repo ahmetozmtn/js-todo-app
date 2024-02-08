@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-slate-300 font-monospace text-black">
+        <div class="flex justify-center font-semibold mx-auto">
+            <div
+                class="flex justify-center bg-stone-200 w-auto rounded-lg mt-16 mb-5"
+                id="container"
+            >
+                <div class="flex justify-center">
+                    <div class="flex justify-center flex-col w-auto">
+                        <div class="flex justify-end mt-3 p-1 items-center">
+                            <div class="flex justify-center items-center">
+                                <label
+                                    class="relative inline-flex items-center cursor-pointer mr-7"
+                                >
+                                    <input
+                                        type="checkbox"
+                                        value=""
+                                        class="sr-only peer"
+                                        id="darkModeToggle"
+                                    />
+
+                                    <div
+                                        class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-1 peer-focus:ring-blue-200 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-500"
+                                    ></div>
+                                    <span class="ms-3 text-sm font-semibold"
+                                        >Dark</span
+                                    >
+                                </label>
+                            </div>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center bg-gray-300 w-auto p-2 mx-3 rounded-lg shadow-lg"
+                            id="todoInput"
+                        >
+                            <input
+                                id="enterTask"
+                                class="bg-gray-300 text-slate-800 border-b-2 order-blue-gray-200 outline outline-0 p-1 m-2 focus:border-sky-500 focus:outline-0 placeholder-slate-600"
+                                type="text"
+                                placeholder="Enter Task"
+                            />
+                            <div class="flex justify-center">
+                                <button
+                                    id="btnAdd"
+                                    class="py-1 px-8 bg-sky-500 hover:bg-sky-400 rounded-md shadow-md"
+                                >
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-gray-300 w-80 h-auto p-2 rounded-lg m-4 shadow-lg"
+                            id="containerTodo"
+                        >
+                            <div>
+                                <ul class="flex flex-col list"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="src/js/script.js"></script>
+    </body>
+</html>
