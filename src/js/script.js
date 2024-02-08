@@ -9,7 +9,7 @@ if (localStorage.getItem("listTask") != null) {
 
 btnAdd.onclick = function (event) {
     event.preventDefault();
-    let content = document.getElementById("enterTask").value;
+    let content = document.getElementById("enterTask").value.trim();
     if (content != "") {
         listTask.unshift({
             content: content,
