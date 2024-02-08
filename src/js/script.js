@@ -77,3 +77,13 @@ function addTask() {
 }
 
 addTask();
+
+function completeTask(index) {
+    if (listTask[index].status == "doing") {
+        listTask[index].status = "complete";
+    } else {
+        listTask[index].status = "doing";
+    }
+    saveLocalStorage();
+    addTask();
+}
