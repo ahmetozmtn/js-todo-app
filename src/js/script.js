@@ -87,3 +87,9 @@ function completeTask(index) {
     saveLocalStorage();
     addTask();
 }
+
+function deleteTask(index) {
+    listTask.splice(index, 1);
+    addTask();
+    saveLocalStorage();
+}
