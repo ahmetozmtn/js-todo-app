@@ -44,14 +44,14 @@ function addTask() {
             newTask.innerHTML = `
             <div class="flex justify-between items-center w-auto p-2 my-2 shadow-md rounded-md bg-blue-400">
                 <div class="flex items-center">
-                    <div class="flex justify-start mx-2" onclick="completeTask(${index})">
+                    <div class="flex justify-start mx-2 cursor-pointer" onclick="completeTask(${index})">
                         <svg class="w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
                         </svg>
                     </div>
                     <div class="flex justify-start w-auto">${task.content}</div>
                 </div>
-                <div class="flex justify-center items-center mx-2" onclick="deleteTask(${index})">
+                <div class="flex justify-center items-center mx-2 cursor-pointer" onclick="deleteTask(${index})">
                     <svg class="w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 18 6m0 12L6 6"></path>
                     </svg>
