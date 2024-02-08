@@ -93,3 +93,58 @@ function deleteTask(index) {
     addTask();
     saveLocalStorage();
 }
+
+let darkModeToggle = document.getElementById("darkModeToggle");
+let body = document.body;
+let container = document.getElementById("container");
+let todoInput = document.getElementById("todoInput");
+let enterTask = document.getElementById("enterTask");
+let containerTodo = document.getElementById("containerTodo");
+
+darkModeToggle.addEventListener("change", function () {
+    if (this.checked) {
+        body.classList.remove("bg-slate-300");
+        body.classList.add("bg-gray-800");
+
+        body.classList.remove("text-black");
+        body.classList.add("text-white");
+
+        container.classList.remove("bg-stone-200");
+        container.classList.add("bg-gray-700");
+
+        todoInput.classList.remove("bg-stone-200");
+        todoInput.classList.add("bg-gray-600");
+
+        enterTask.classList.remove("bg-gray-300");
+        enterTask.classList.add("bg-gray-600");
+        enterTask.classList.remove("text-slate-800");
+        enterTask.classList.add("text-white");
+        enterTask.classList.remove("placeholder-slate-600");
+        enterTask.classList.add("placeholder-white");
+
+        containerTodo.classList.remove("bg-gray-300");
+        containerTodo.classList.add("bg-gray-600");
+    } else {
+        body.classList.remove("bg-gray-800");
+        body.classList.add("bg-slate-300");
+        body.classList.remove("text-white");
+        body.classList.add("text-black");
+
+        container.classList.remove("bg-gray-700");
+        container.classList.add("bg-stone-200");
+
+        todoInput.classList.remove("bg-gray-600");
+        todoInput.classList.add("bg-stone-200");
+
+        enterTask.classList.remove("bg-gray-600");
+        enterTask.classList.add("bg-gray-300");
+
+        enterTask.classList.remove("text-white");
+        enterTask.classList.add("text-slate-800");
+        enterTask.classList.remove("placeholder-white");
+        enterTask.classList.add("placeholder-slate-600");
+
+        containerTodo.classList.remove("bg-gray-600");
+        containerTodo.classList.add("bg-gray-300");
+    }
+});
