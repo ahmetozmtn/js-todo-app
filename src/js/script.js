@@ -20,3 +20,9 @@ btnAdd.onclick = function (event) {
     document.getElementById("enterTask").value = "";
     saveLocalStorage();
 };
+
+taskInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        btnAdd.click();
+    }
+});
