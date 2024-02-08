@@ -26,3 +26,7 @@ taskInput.addEventListener("keydown", function (event) {
         btnAdd.click();
     }
 });
+
+function saveLocalStorage() {
+    localStorage.setItem("listTask", JSON.stringify(listTask));
+}
